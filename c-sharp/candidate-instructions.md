@@ -6,15 +6,15 @@ For the purposes of this test, imagine that this is a new system that was origin
 
 All of the below exercises should be performed as though you are working on a real risk system. You should feel free to refactor any code as you see fit and you should always attempt to reuse as much code and possible and write the minimum amount of new code.
 
-Apart from the exercises where you are asked to write or modify unit tests, none of the other unit tests should be functionally modified.
+Apart from the exercises where you are asked to write or modify unit tests, none of the other unit tests should be modified.
 
-There are a number of occasions in the test where the solution is left to the discretion of the developer. You should decide how it is most appropriate to proceed and be prepared to justify your decisions and assumptions.
+There are a number of occasions in the test where multiple solutions are possible. You should decide how it is most appropriate to proceed and be prepared to justify your decisions and assumptions.
 
 At the end of the exercise all of the code should compile, the unit tests should run successfully and the program should produce the expected output.
 
 # Rules
 
-You have a maximum of two hours to complete all exercises. You should allocate your time accordingly and skip any questions you are unable to complete. The questions get progressively more difficult, the first few questions should take only a matter of minutes to complete, the later questions will take longer. Not all candidates will be able to complete the test in the allocated time.
+This test should take about 2 hours to complete and you should try and limit your time to this. You should allocate your time accordingly and skip any questions you are unable to complete. The questions get progressively more difficult, the first few questions should take only a matter of minutes to complete, the later questions will take longer. Depending on your experience you may not be able to complete all of the questions. This is deliberate and expected.
 
 You may use any resources you wish to complete the test. You may use the internet, books, or any other resources you have available including AI tools. You should not ask for help from any other person. **You will be asked to explain your solution and justify your decisions.**
 
