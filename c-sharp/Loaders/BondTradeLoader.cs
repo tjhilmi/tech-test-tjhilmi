@@ -8,7 +8,7 @@ namespace HmxLabs.TechTest.Loaders
 
         public IEnumerable<ITrade> LoadTrades()
         {
-            var tradeList = new BondTradeList();
+            var tradeList = new TradeList();
             LoadTradesFromFile(DataFile, tradeList);
 
             return tradeList;
@@ -40,7 +40,7 @@ namespace HmxLabs.TechTest.Loaders
                 return trade;
         }
 
-        private void LoadTradesFromFile(string? filename_, BondTradeList tradeList_)
+        private void LoadTradesFromFile(string? filename_, TradeList tradeList_)
         {
             if (null == filename_)
                 throw new ArgumentNullException(nameof(filename_));
