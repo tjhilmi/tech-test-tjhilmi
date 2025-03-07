@@ -10,6 +10,7 @@ namespace HmxLabs.TechTest.Models
         public override string TradeType
         {
             get { throw new NotImplementedException(); }
+            set { }
         }
 
         public DateTime ValueDate { get; set; }

@@ -27,7 +27,17 @@ namespace HmxLabs.TechTest.Loaders
             trade.Notional = Double.Parse(items[4]);
             trade.Rate = Double.Parse(items[5]);
 
-            return trade;
+            //From TradeId we will assume Supra types are Government Bonds
+            if (items[0].Equals("GovBond") || items[0].Equals("Supra"))
+            {
+                trade.TradeType = BondTrade.GovBondTradeType;
+            }
+            else if (items[0].Equals("CorpBond"))
+            {
+                trade.TradeType = BondTrade.CorpBondTradeType;
+            }
+
+                return trade;
         }
 
         private void LoadTradesFromFile(string? filename_, BondTradeList tradeList_)
