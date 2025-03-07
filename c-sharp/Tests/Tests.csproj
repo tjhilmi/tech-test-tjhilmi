@@ -5,7 +5,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>HmxLabs.TechTest.Tests</RootNamespace>
-    </PropertyGroup>
+		<IsTestProject>true</IsTestProject>
+	</PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Loaders\Loaders.csproj" />
@@ -16,6 +17,8 @@
 
     <ItemGroup>
       <PackageReference Include="NUnit" Version="4.3.2" />
-    </ItemGroup>
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+	  <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />	
+	</ItemGroup>
 
 </Project>
