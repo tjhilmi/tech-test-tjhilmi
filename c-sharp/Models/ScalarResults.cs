@@ -51,12 +51,31 @@ namespace HmxLabs.TechTest.Models
 
         public IEnumerator<ScalarResult> GetEnumerator()
         {
-            throw new System.NotImplementedException();
-        }
+            List<string> TradeIdsMerged = _results.Keys.Concat(_errors.Keys).Distinct().ToList();
+            foreach (string _tradeId in TradeIdsMerged)
+            {
+                if (_results.ContainsKey(_tradeId) && _errors.ContainsKey(_tradeId))
+                {
+                    ScalarResult trade = new ScalarResult(_tradeId, _results[_tradeId], _errors[_tradeId]);
+                    yield return trade;
+                }
+                else if (_results.ContainsKey(_tradeId))
+                {
+                    ScalarResult trade = new ScalarResult(_tradeId, _results[_tradeId], null);
+                    yield return trade;
+                }
+                else if (_errors.ContainsKey(_tradeId))
+                {
+                    ScalarResult trade = new ScalarResult(_tradeId, null, _errors[_tradeId]);
+                    yield return trade;
+                }
 
+            }
+        }
+        
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            return GetEnumerator();
         }
 
         private readonly Dictionary<string, double> _results = new Dictionary<string, double>();
