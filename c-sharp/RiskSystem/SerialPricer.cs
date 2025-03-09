@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using HmxLabs.TechTest.Models;
 
 namespace HmxLabs.TechTest.RiskSystem
@@ -33,7 +34,10 @@ namespace HmxLabs.TechTest.RiskSystem
 
             foreach (var configItem in pricerConfig)
             {
-                throw new NotImplementedException();
+
+                object EngineType = Activator.CreateInstance(configItem.Assembly, configItem.TypeName);
+
+                _pricers.Add(configItem.TradeType, (IPricingEngine)EngineType);
             }
         }
 
